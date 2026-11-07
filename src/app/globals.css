@@ -1,26 +1,101 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colors - Dark First (Quiet Tech Cyclist) - DEFAULT */
+  --color-background: #0A0C10;
+  --color-surface: #121A2B;
+  --color-surface-alt: #162133;
+  --color-accent: #5B7A99;
+  --color-accent-hover: #4A647F;
+  --color-foreground: #EEF0F2;
+  --color-foreground-muted: #A9B4C2;
+  --color-foreground-subtle: #6B7A8A;
+  --color-border: #1E2838;
+  --color-border-hover: #2A3648;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 5rem;
+  
+  /* Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 0.75rem;
+  
+  /* Transitions */
+  --transition-fast: 150ms ease-out;
+  --transition-normal: 200ms ease-out;
+  --transition-slow: 300ms ease-out;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Light mode when 'light' class is present */
+html.light {
+  --color-background: #F5F6F7;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #E8EAED;
+  --color-accent: #5B7A99;
+  --color-accent-hover: #4A647F;
+  --color-foreground: #1A1D21;
+  --color-foreground-muted: #5A6270;
+  --color-foreground-subtle: #8A9199;
+  --color-border: #D1D5DB;
+  --color-border-hover: #9CA3AF;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* System preference for light mode (fallback) */
+@media (prefers-color-scheme: light) {
+  :root:not(.dark) {
+    --color-background: #F5F6F7;
+    --color-surface: #FFFFFF;
+    --color-surface-alt: #E8EAED;
+    --color-accent: #5B7A99;
+    --color-accent-hover: #4A647F;
+    --color-foreground: #1A1D21;
+    --color-foreground-muted: #5A6270;
+    --color-foreground-subtle: #8A9199;
+    --color-border: #D1D5DB;
+    --color-border-hover: #9CA3AF;
   }
 }
 
+@theme inline {
+  --color-background: var(--color-background);
+  --color-surface: var(--color-surface);
+  --color-surface-alt: var(--color-surface-alt);
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-foreground: var(--color-foreground);
+  --color-foreground-muted: var(--color-foreground-muted);
+  --color-foreground-subtle: var(--color-foreground-subtle);
+  --color-border: var(--color-border);
+  --color-border-hover: var(--color-border-hover);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
+  --font-mono: var(--font-jetbrains-mono);
+  
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-2xl: var(--radius-2xl);
+  
+  --transition-fast: var(--transition-fast);
+  --transition-normal: var(--transition-normal);
+  --transition-slow: var(--transition-slow);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
 }

@@ -1,0 +1,95 @@
+import { SkillGroup } from "@/types";
+
+export const skills: SkillGroup[] = [
+  {
+    group: "Mobile",
+    items: [
+      "Kotlin",
+      "Jetpack Compose",
+      "MVVM Architecture",
+      "Room Database",
+      "Retrofit",
+      "Firebase",
+      "Coroutines",
+      "Hilt",
+      "Jetpack Navigation",
+      "ViewModel & LiveData",
+      "DataStore",
+      "Material Design 3",
+      "Gradle",
+    ],
+  },
+  {
+    group: "Frontend",
+    items: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "Context API",
+    ],
+  },
+  {
+    group: "Backend",
+    items: [
+      "Node.js",
+      "Express",
+      "REST APIs",
+      "SQL",
+      "PostgreSQL",
+      "MongoDB",
+      "JWT Authentication",
+      "Firebase Auth",
+      "API Documentation (Swagger)",
+    ],
+  },
+  {
+    group: "Design & Planning",
+    items: [
+      "Figma",
+      "Brand guidelines",
+      "Wireframing",
+      "UML/ERD diagrams",
+    ],
+  },
+  {
+    group: "DevOps & Quality",
+    items: [
+      "Git & GitHub branching",
+      "CI/CD",
+      "SonarQube",
+      "Docker",
+      "JUnit",
+      "Espresso",
+      "Mockito",
+      "Clean code principles",
+      "Design patterns",
+    ],
+  },
+  {
+    group: "Tools",
+    items: [
+      "Android Studio",
+      "Spring Tool Suite",
+      "VS Code",
+      "Postman",
+      "Git",
+      "GitHub",
+    ],
+  },
+  {
+    group: "Teamwork",
+    items: [
+      "Team leadership",
+      "Trello",
+      "Conflict resolution",
+      "Agile/Scrum",
+      "Code review",
+      "Technical communication",
+      "Documentation writing",
+    ],
+  },
+];
